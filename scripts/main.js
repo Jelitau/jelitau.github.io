@@ -1,17 +1,18 @@
-let myButton = document.querySelector('button');
+let changeUserButton = document.getElementById('changeUserButton')
 let myHeading = document.querySelector('h1');
 
 
-if(!localStorage.getItem('name')) {
+if (!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
   myHeading.textContent = 'Hiiii to my Play Ground, ' + storedName;
 }
 
-myButton.onclick = function() {
+changeUserButton.onclick = function () {
   setUserName();
 }
+
 
 function setUserName() {
   let myName = prompt('Please enter your name. \nYour Name will be stored locally on your Device.', 'Username');
